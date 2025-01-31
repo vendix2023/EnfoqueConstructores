@@ -119,10 +119,8 @@ const Navbar = () => {
         </li>
 
         <li className='proxLanzamientos'><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
-        
-        <div className='btnNaranjaNavbarMovil'>
-          <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-        </div>
+        <li className='servicioCliente'><a href="/servicio">SERVICIO AL CLIENTE</a></li>
+
           
         </ul>
       </div>
@@ -194,13 +192,12 @@ const Navbar = () => {
           )}
         </li>
 
-          <li className='proxLanzamientos'><NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>PRÓXIMOS LANZAMIENTOS</NavLink></li>
+        <li className='proxLanzamientos'><NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>PRÓXIMOS LANZAMIENTOS</NavLink></li>
+        <li className='servicioCliente'><a href="/servicio">SERVICIO AL CLIENTE</a></li>
         </ul>
       </div>
 
-      <div className='btnNaranjaNavbar'>
-        <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-      </div>
+      
     </nav>
   );
 };

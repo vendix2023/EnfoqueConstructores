@@ -178,9 +178,14 @@ const Sauce = () => {
         <h1>Proyecto de casas <br></br> desde $150.000.000</h1>
       </div>
       <div className='descubre-alameda'>
+        <div className='descubre-alameda-texto'>
         <p><strong>Bienvenidos a Alameda, un exclusivo proyecto de casas en Sincelejo - Sucre, </strong>
         diseñado para quienes buscan tranquilidad, seguridad y un espacio propio para disfrutar en familia.  Con 180 viviendas cuidadosamente construidas, tendrás un hogar con patio y antejardín en un entorno que inspira comunidad y calidad de vida.
         <strong> ¡Descubre cómo vivir de una manera única y especial!</strong> </p>
+        <div className='btnNaranjaNavbar'>
+          <a href="https://drive.google.com/drive/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de obra</a>
+        </div>
+        </div>
         <div className="galerias-fotos-alameda">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -197,7 +202,7 @@ const Sauce = () => {
       <div className='espacios-alameda'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalAzulClaro'></div>
-        <p>Casas de 43 m2 en lotes de 72 m2 y con placa para construir segundo piso. </p>
+        <p>Casas de 44 m2 en lotes de 72 m2 y con placa para construir segundo piso. </p>
         <div className='lineaVerticalAzulClaro'></div>
         <div className='info-alameda'>
           <div className='info-alameda-img'>
@@ -208,7 +213,7 @@ const Sauce = () => {
 
           </div>
           <div className='info-alameda-texto'>
-            <p>43 m2 con posibilidad de ampliación.</p>
+            <p>44 m2 con posibilidad de ampliación.</p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
             <p>Patio, cocina, sala-comedor y antejardín.</p>
@@ -224,8 +229,8 @@ const Sauce = () => {
         <div className='lineaVerticalAzulClaro'></div>
         <div className='comodidades-alameda-lista'>
           <div className='salon'>
-            <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <img className="logoSolo" src={logoSolo} alt="logoSolo" />
+            <p>Zonas de entretenimiento.</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />

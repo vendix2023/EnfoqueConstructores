@@ -11,8 +11,13 @@
   --azul-oscuro-acacias:#072b5f;
   --azul-oscuro-alameda:#072b5f;
   --azul-claro-alameda:#3b82bd;
+  --naranja-claro-alameda:#e99f3c;
   --font-cuerpo: 'Futura', Arial, sans-serif;
   --font-titulos: 'Mulish', sans-serif;
+  --letra-h1:3.5rem;
+  --letra-h2:2.5rem;
+  --letra-h1:1.5rem;
+  --letra-p:1.2rem;
   
 
 
@@ -73,7 +78,7 @@ html, body {
   /*flex-direction: row;*/
   gap: 2rem; /* Espaciado entre elementos */
   position: relative; /* Necesario para submenús */
-  width: 40rem;
+  width: 55rem;
   padding: 0; 
 
   
@@ -276,18 +281,17 @@ html, body {
   justify-content: space-between; 
   text-align: center;
   background-color: white;
-  
-  
+  width: 100%;
 
 }
 
 .BannerHome{
   width: 100%; 
-  margin: 2rem 4rem 0 4rem;
-  border-radius: 0.5rem;
-  padding: 0 4rem 0 4rem;
+  margin: 2rem 0rem 0 0rem;
+  padding:0;
   
 }
+
 .aliados{
   display: flex; 
   flex-direction: row;
@@ -298,22 +302,27 @@ html, body {
   margin: 2rem 0 2rem 0;
   height: 40%;
   
-  
-  
+
 }
-.HomeCircle {
-  padding: 0;
-  margin: 0;
-  width: 25%;
+
+
+.aliados{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
 }
 .aliadosInfo{
-  margin:2rem 4rem 0 0;
+  display: flex; 
+  flex-direction: row;
+  align-items: flex-start; 
+  justify-content: space-between; 
+  margin:2rem 4cm 0 0;
   height: 100%;
   
   
-  
 }
-.aliadosInfo h1 {
+.aliadosInfo > h1 {
   font-size: 2.5rem;
   color:var(--gris-oscuro);
   font-family: var(--font-titulos);
@@ -321,17 +330,122 @@ html, body {
   text-align: left;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 50%;
+  margin: 0 1rem 0 3rem;
 }
-.aliadosInfo p {
-  font-size: 1.5rem;
-  color:var(--gris-medio);
+.cuadro-gris-btn{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
+  background-color: var(--gris-oscuro);
+  width: 32%;
+  border-radius: 0.5rem;
+  margin: 0 1rem 0 0;
+}
+.cuadro-gris-btn h1{
+  color:var(--gris-claro);
+  font-size:var(--letra-h1);
   font-family: var(--font-cuerpo);
-  text-align: justify;
-  font-weight: 400;
-  letter-spacing: -0.05em; 
-  
+  padding: 0.5rem;
+
+}
+.btnGrisClaro {
+  background-color: var(--gris-claro);
+  border-radius: 2rem;
+  width: 50%;
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
   
 }
+.btnGrisClaro a{
+  color: var(--gris-oscuro) !important;
+  font-size: var(--letra-p);
+  font-weight: bold;
+  -webkit-text-stroke: 0.3px var(--gris-oscuro); /* Añade un contorno negro */
+  font-family: var(--font-cuerpo);
+}
+.constructor-vivienda{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  gap:2rem;
+  margin: 0;
+  height: 30rem;
+  background-color: #27703b;
+  
+}
+.constructor, .vivienda{
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  margin:0;
+  padding: 0;
+  width: 30rem;
+  height: 10rem;
+
+  
+}
+.constructor img, .vivienda img{
+  position: absolute;
+  
+}
+.constructor img{
+  width: 4rem;  
+}
+.vivienda img{
+  width: 3rem;
+}
+.constructor h1, .vivienda h1{
+  
+  font-family: var(--letra-h1);
+  background-color: var(--naranja);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 20rem;
+  position: absolute;
+
+  
+}
+.constructor h1 strong, .vivienda h1 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+.constructor p, .vivienda p{
+  
+  font-family: var(--letra-p) !important;
+  background-color: var(--gris-claro);
+  font-family: var(--font-cuerpo) !important;
+  color: var(--gris-oscuro) !important;
+  padding: 3rem 0.5rem 1rem 0.5rem;
+  max-width: 30rem;
+  border-radius: 2rem;
+  font-weight: var(--letra-p);
+  min-height: 20rem;
+  width: 25rem;
+  position: absolute;
+  
+}
+
+#elemento1 {
+  top: 50%; /* Primer elemento en la parte superior */
+  transform: translateY(-10%);
+}
+
+#elemento2 {
+  top:10%; /* Segundo elemento, desplazado un 30% desde la parte superior */
+  transform: translateY(-10%); /* Mueve el segundo elemento hacia arriba para superponerse con el primero */
+}
+
+#elemento3 {
+  top: 20%; /* Tercer elemento, desplazado un 60% desde la parte superior */
+  /* Mueve el tercer elemento hacia arriba para superponerse con el segundo */
+}
+
+
 .proyectos-list{
   background-image: url('utils/inicio/BKproyectos.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
@@ -914,7 +1028,7 @@ html, body {
   
 
 }
-.descubre-sacuces{
+.descubre-sauces{
   display: flex; /* Asegura alineación dentro del botón */
   align-items: center; 
   justify-content: center;
@@ -922,13 +1036,21 @@ html, body {
   width: 100%;
 
 }
-.descubre-sacuces p{
+.descubre-sauces-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
+.descubre-sauces p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
+  
   
 
 }
@@ -942,15 +1064,23 @@ html, body {
   
 }
 
+
 .contenedor-foto {
   width: 100%;
   height: auto;
+  max-width: 30rem;
+  max-height: 20rem; 
 }
 
 .contenedor-foto img {
+  /*
   width: 100%;
   height: auto;
-  display: block;
+  display: block;*/
+  max-width: 100%;  /* Evita que se salga del contenedor */
+  max-height: 20rem; /* Asegura que respete la altura máxima */
+  height: auto;     /* Mantiene la proporción */
+  width: auto; 
 }
 
 .btn-flecha {
@@ -1535,13 +1665,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-piamonte-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-piamonte p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -2152,13 +2289,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-acacias-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-acacias p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -2533,7 +2677,14 @@ html, body {
   margin: 2rem 0 1rem 0;
   padding: 0;
 }
-
+.logoAlameda{
+  height: 10rem;
+  margin: 1rem 0 0 0;
+}
+.comodidades-alameda-lista img{
+  height: 2rem;
+  margin: 1rem 0 0 0;
+}
 .banner-alameda{
   display: flex; 
   flex-direction: row;
@@ -2773,13 +2924,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-alameda-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-alameda p{
   font-family: var(--font-cuerpo);
   color: var(--azul-oscuro-alameda);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -3172,8 +3330,9 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
-.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a  {
+.footbar-info a, 
+.btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
+.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a, .btnGrisClaro a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -3949,7 +4108,7 @@ nav ul li a{
   font-size: 2rem;
 
 }
-.descubre-sacuces{
+.descubre-sauces{
   display: flex; /* Asegura alineación dentro del botón */
   align-items: center; 
   justify-content: center;
@@ -3957,7 +4116,7 @@ nav ul li a{
   width: 100%;
 
 }
-.descubre-sacuces p{
+.descubre-sauces p{
  
   width: 100%;
   font-size: 1rem;

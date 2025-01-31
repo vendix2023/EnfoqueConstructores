@@ -176,11 +176,16 @@ const Sauce = () => {
         <h1>Proyecto de casas <br></br> desde $166.400.000</h1>
       </div>
       <div className='descubre-acacias'>
+      <div className='descubre-acacias-texto'>
         <p><strong>Las Acacias </strong>
         es más que un proyecto de casas, es la oportunidad de vivir como siempre soñaste. 
         <strong> Ubicado en Turbaco - Bolivar a tan solo 30 minutos de Cartagena, </strong> 
         con 500 viviendas independientes; disfrutarás de un hogar con patio y antejardín, ideal para ti y tu familia. 
         <strong>¡Conoce lo que hace de Las Acacias un lugar especial!</strong> </p>
+        <div className='btnNaranjaNavbar'>
+          <a href="https://drive.google.com/drive/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de obra</a>
+        </div>
+        </div>
         <div className="galerias-fotos-acacias">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -225,7 +230,7 @@ const Sauce = () => {
         <div className='comodidades-acacias-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento.</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />

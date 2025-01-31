@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 import BannerHome from '../utils/inicio/Banner-Home.webp';
-import HomeCircle from '../utils/inicio/Image-circle.webp';
+import Constructor from '../utils/inicio/constructor.webp';
+import Vivienda from '../utils/inicio/vivienda.webp';
 import LogosProyectos from '../utils/inicio/Logos-proyectos.webp';
 import Grua from '../utils/inicio/Grua.webp';
 
@@ -82,12 +83,36 @@ const inicio = () => {
       <img className="BannerHome" src={BannerHome} alt="BannerHome" />
       <div className='aliados'>
         <div className='aliadosInfo'>
-          <h1>Somos el aliado que necesitas para hacer realidad tus proyectos de construcción.</h1>
-          <p>Brindamos outsourcing especializado en todo Colombia para constructoras,
-          gestionando tareas clave como procesos jurídicos, cartera y administración, para que
-          puedas enfocarte en construir.</p>
+          <h1>Nos encargamos que la construcción y la compra de vivienda sean procesos más simples, eficientes y seguros.</h1>
+          <div className='cuadro-gris-btn'>
+            <h1>¿Eres constructor o buscas vivienda?</h1>
+            <div className='btnGrisClaro'>
+              <a href="#contacto">Haz clic aquí</a>
+            </div>
+            <h1>Para ponernos en contacto</h1>
+          </div>   
         </div>
-        <img className='HomeCircle' src={HomeCircle} alt="HomeCircle" />
+        <div className='constructor-vivienda'>
+          <div className='constructor'>
+            <img className="Constructor" id="elemento1" src={Constructor} alt="Constructor" />
+            <h1 id="elemento2">Si eres <strong>constructor</strong></h1>
+            <p id="elemento3">Nos encargamos de la gestión administrativa,
+              jurídica y financiera de tus proyectos, para
+                que te enfoques en lo más importante: construir.
+                Además, vendemos tus desarrollos al cliente final,
+                  asegurando que lleguen a las personas indicadas.</p>
+
+          </div>
+          <div className='vivienda'>
+            <img className="Vivienda" id="elemento1" src={Vivienda} alt="Vivienda" />
+            <h1 id="elemento2">Si <strong>buscas vivienda</strong></h1>
+            <p id="elemento3">Para invertir o vivir, te conectamos con 
+              proyectos confiables y bien gestionados, 
+              brindándote acompañamiento en cada paso hasta 
+              la entrega de tu nuevo hogar.</p>
+          </div>
+
+        </div>
       </div>
       <div className='proyectos-list'>
         <div className='proyectos-list-info'>

@@ -171,13 +171,18 @@ const Sauce = () => {
       <div className='proyecto-sauces'>
         <h1>Proyecto de casas <br></br> desde 135 SMMLV</h1>
       </div>
-      <div className='descubre-sacuces'>
+      <div className='descubre-sauces'>
+        <div className='descubre-sauces-texto'>
         <p><strong>Descubre nuestro proyecto Los Sauces, </strong>
           un lugar donde la independencia y la tranquilidad se encuentran. 
           <strong> Este proyecto de 402 casas en La Unión - Antioquia,</strong> ofrece más que viviendas: 
           te invita a formar parte de una comunidad segura y privilegiada. 
           Imagina un hogar con patio y antejardín, perfecto para disfrutar con tu familia. 
           <strong> ¿Te animas a ser parte de Los Sauces?</strong> </p>
+          <div className='btnNaranjaNavbar'>
+            <a href="https://drive.google.com/drive/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de obra</a>
+          </div>
+        </div>
         <div className="galerias-fotos-sauces">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -224,7 +229,7 @@ const Sauce = () => {
         <div className='comodidades-sauces-lista'>
           <div className='salon'>
             <img src={arbol} alt="arbol" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento.</p>
           </div>
           <div className='juegos'>
             <img src={arbol} alt="arbol" />

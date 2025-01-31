@@ -171,11 +171,16 @@ const Sauce = () => {
         <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
       </div>
       <div className='descubre-piamonte'>
+        <div className='descubre-piamonte-texto'>
         <p><strong>Bienvenido a Piamonte, </strong>
         un lugar donde cada casa tiene su propio espacio y cada familia encuentra su hogar.
         <strong> Con 700 unidades de vivienda en Turbaco - Bólivar, </strong> 
          este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
         <strong> ¿Listo para vivirlo?  </strong> </p>
+        <div className='btnNaranjaNavbar'>
+          <a href="https://drive.google.com/drive/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de obra</a>
+        </div>
+        </div>
         <div className="galerias-fotos-piamonte">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -220,7 +225,7 @@ const Sauce = () => {
         <div className='comodidades-piamonte-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento.</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />
