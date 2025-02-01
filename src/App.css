@@ -16,9 +16,8 @@
   --font-titulos: 'Mulish', sans-serif;
   --letra-h1:3.5rem;
   --letra-h2:2.5rem;
-  --letra-h1:1.5rem;
-  --letra-p:1.2rem;
-  
+  --letra-h3:1.5rem;
+  --letra-p:1.3rem;
 
 
 }
@@ -322,8 +321,8 @@ html, body {
   
   
 }
-.aliadosInfo > h1 {
-  font-size: 2.5rem;
+.aliadosInfo > h2 {
+  font-size: var(--letra-h2);
   color:var(--gris-oscuro);
   font-family: var(--font-titulos);
   font-weight: 900;
@@ -343,9 +342,9 @@ html, body {
   border-radius: 0.5rem;
   margin: 0 1rem 0 0;
 }
-.cuadro-gris-btn h1{
+.cuadro-gris-btn h3{
   color:var(--gris-claro);
-  font-size:var(--letra-h1);
+  font-size:var(--letra-h3);
   font-family: var(--font-cuerpo);
   padding: 0.5rem;
 
@@ -371,12 +370,13 @@ html, body {
   align-items: center; 
   gap:2rem;
   margin: 0;
-  height: 30rem;
-  background-color: #27703b;
+  height: 27rem;
+  
+  
   
 }
 .constructor, .vivienda{
-  position: relative;
+  
   display: flex; 
   flex-direction: column;
   align-items: center; 
@@ -384,65 +384,70 @@ html, body {
   padding: 0;
   width: 30rem;
   height: 10rem;
+  position: relative;
 
   
 }
-.constructor img, .vivienda img{
-  position: absolute;
-  
-}
+
 .constructor img{
   width: 4rem;  
+  height: auto;
 }
 .vivienda img{
   width: 3rem;
+  height: auto;
 }
-.constructor h1, .vivienda h1{
+.constructor h3, .vivienda h3{
   
-  font-family: var(--letra-h1);
+  font-size: var(--letra-h3);
   background-color: var(--naranja);
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
   padding: 0.8rem;
   border-radius: 2.5rem;
   width: 20rem;
-  position: absolute;
+  
 
   
 }
-.constructor h1 strong, .vivienda h1 strong {
+.constructor h3 strong, .vivienda h3 strong {
   font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
   -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
 }
 .constructor p, .vivienda p{
   
-  font-family: var(--letra-p) !important;
+  font-size: var(--letra-p) ;
   background-color: var(--gris-claro);
   font-family: var(--font-cuerpo) !important;
   color: var(--gris-oscuro) !important;
-  padding: 3rem 0.5rem 1rem 0.5rem;
+  padding: 3rem 1.5rem 1rem 1.5rem;
   max-width: 30rem;
   border-radius: 2rem;
   font-weight: var(--letra-p);
   min-height: 20rem;
   width: 25rem;
-  position: absolute;
+  text-align: justify;
   
 }
 
 #elemento1 {
-  top: 50%; /* Primer elemento en la parte superior */
+  position: absolute;
+  top: -50%;
   transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
 }
 
 #elemento2 {
-  top:10%; /* Segundo elemento, desplazado un 30% desde la parte superior */
-  transform: translateY(-10%); /* Mueve el segundo elemento hacia arriba para superponerse con el primero */
+  position: absolute;
+  top: -40%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
 }
 
 #elemento3 {
-  top: 20%; /* Tercer elemento, desplazado un 60% desde la parte superior */
-  /* Mueve el tercer elemento hacia arriba para superponerse con el segundo */
+  position: absolute;
+  top: -25%;
+  z-index: 1; /* Debajo de elemento2 */
 }
 
 
@@ -454,9 +459,10 @@ html, body {
   width: 100%;
   padding: 4rem;
   display: flex; 
-  flex-direction: column;
-  align-items: left; 
+  flex-direction: row;
+  align-items: center; 
   text-align: left;
+  justify-content: center;
 
 }
 .LogosProyectosDiv{
@@ -467,9 +473,11 @@ html, body {
   align-items: center; 
   text-align: center;
   
+  
 }
 .LogosProyectos{
   width: 80%;
+  border-radius: 2rem;
   
 }
 .proyectos-list-info{
@@ -484,22 +492,33 @@ html, body {
 .proyectos-list-info-text{
   margin: 0;
   padding: 0;
+  
 }
 .proyectos-list-info-text h1{
   padding: 0;
   margin: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   line-height: 1;
+}
+.proyectos-list-info-text p{
+  padding: 0;
+  margin: 0;
+  font-size: var(--letra-p);
+  line-height: 1.1;
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+
 }
 
 .lineaVertical{
   background-color: var(--naranja);
   width: 0.25rem;
-  margin: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  
 }
 
 .clientes{
-  background-color: var(--naranja);
+  background-color:white;
   display: flex; 
   flex-direction: row;
   align-items: center; 
@@ -552,6 +571,99 @@ html, body {
 .grua{
   margin: 2rem;
 }
+.constructor-vivienda-form{
+  background-color: var(--naranja);
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: center; 
+  width: 100%;
+}
+.mensaje-constructor-vivienda{
+  width: 70%;
+  margin: 1rem 4rem 1rem 1rem;
+}
+.mensaje-constructor-vivienda h2{
+  font-size: var(--letra-h2);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+}
+.mensaje-constructor-vivienda h3{
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+
+}
+.form-inicio {
+  background-color: var(--azul-oscuro-acacias);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40rem; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 10rem 1rem 1rem;
+}
+
+.form-inicio form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+}
+
+.form-inicio form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-inicio label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
+}
+
+.form-inicio input[type="text"],
+.form-inicio input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.autorizo-checkbox-inicio input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox-inicio label {
+  font-size: 1rem;
+  color: var(--gris-oscuro);
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
+}
+
 /*CONOCENOS*/
 .conocenos{
   display: flex; 
@@ -913,6 +1025,7 @@ html, body {
   width: 100%;
   gap: 0.5rem; /* Espacio entre el checkbox y el texto */
   margin-top: 0.5rem;
+  
 }
 
 .autorizo-checkbox-sauces input[type="checkbox"] {
